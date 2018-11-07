@@ -1,8 +1,4 @@
 require 'net/smtp'
-require 'resolv-replace'
-
-dns_resolver = Resolv::DNS.new(nameserver: ['8.8.8.8', '4.4.4.4'])
-Resolv::DefaultResolver.replace_resolvers([dns_resolver])
 
 class Mailer
   class NoEmailException < Exception; end
@@ -18,7 +14,7 @@ class Mailer
     @sender_method = :send_email
     @distro.merge!(data.reject{|k,v| v[:email].empty? || v[:email].nil?})
     self
-  end
+  endrequire
 
   def test(data)
     @sender_method = :display_email
