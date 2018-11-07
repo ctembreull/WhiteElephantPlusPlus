@@ -1,0 +1,28 @@
+{
+  "mailer": {
+    "smtp_host": "",
+    "smtp_port": 25,
+    "smtp_helo": "localhost",
+    "smtp_username": "",
+    "smtp_password": "",
+    "smtp_sender_email": "",
+    "smtp_sender_name": "",
+    "default_template": "config/default_template.erb",
+  },
+  "logger": {
+    "log_path": "./.logs"
+  },
+  "statekeeper": {
+    "state_path": "./.state"
+  },
+  "distribution": {
+    "person": {
+      "id": "",
+      "name": "",
+      "blacklist": [],
+      "email": "",
+      "test": false,
+      "admin": false
+    }
+  }
+}
