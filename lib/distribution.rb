@@ -2,7 +2,6 @@ class Distribution
   class NoCandidateException < Exception; end
   class InvalidListException < Exception; end
 
-  attr_reader :distro, :attempts
   def initialize(config:)
     @max_attempts = 25
     @attempts = 0
